@@ -1,0 +1,66 @@
+.container {
+  min-width: 30rem;
+  position: absolute;
+  left: 50%;
+  margin-top: 5rem;
+  transform: translateX(-50%);
+}
+
+.card {
+  background: $c-pure-white;
+
+  &__header {
+    background: $c-primary;
+    padding: 0.5rem 1rem;
+    color: $c-white;
+
+    h1{
+      margin: 0;
+    }
+  }
+
+  &__main {
+    padding: 1rem;
+    input{
+      border: none;
+      border-bottom: 0.2rem solid $c-secondary;
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  &__button {
+    border-top: 0.1rem solid $c-secondary;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    .register {
+      background: $c-white;
+      color: $c-secondary;
+    }
+
+    .login-index {
+      background: $c-primary;
+      color: $c-white;
+    }
+
+    .login-register {
+      background: $c-white;
+      color: $c-secondary;
+    }
+
+    .sign-up {
+      background: $c-primary;
+      color: $c-white;
+    }
+
+    button{
+      border: none;
+      color: $c-white;
+      padding: 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  }
+}

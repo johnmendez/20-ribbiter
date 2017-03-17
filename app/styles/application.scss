@@ -1,0 +1,27 @@
+body {
+  background: $c-white;
+}
+
+.nav {
+  background: $c-primary;
+  font-family: $font;
+
+  h1 {
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: $m-gutter;
+    color: $c-white;
+  }
+
+  &__right {
+    display: flex;
+
+    h1 {
+      padding-left: $m-gutter;
+    }
+  }
+}

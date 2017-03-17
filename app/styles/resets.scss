@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:link {
+  text-decoration: none;
+  color: $c-white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: $c-white;
+
+}
