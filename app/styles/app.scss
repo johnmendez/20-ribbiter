@@ -5,10 +5,10 @@
 // @import 'font-awesome';
 @import 'box-sizing';
 
-$c-primary: #afb300;
+$c-primary: #d0661a;
 $c-light: #b5e655;
-$c-secondary: #4bb5c1;
-$c-secondary-light: #7FC6BC;
+$c-secondary: #dda069;
+$c-secondary-light: #3c2609;
 $c-white: #edf7f2;
 $c-pure-white: #fff;
 
@@ -18,10 +18,20 @@ $m-max-width: 60rem;
 
 $font: 'Dosis', sans-serif;
 
+@import 'users';
 @import 'resets';
 @import 'application';
 @import 'message';
 
 .section {
   position: relative;
+}
+
+.alert {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem solid $c-secondary;
+  color: $c-secondary;
+  font-size: 1.5rem;
+  text-align: center;
 }

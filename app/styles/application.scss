@@ -20,7 +20,7 @@ body {
   &__right {
     display: flex;
 
-    h1 {
+    &-links {
       padding-left: $m-gutter;
     }
   }

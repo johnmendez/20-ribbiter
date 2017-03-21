@@ -2,6 +2,9 @@
   <div class="">
     <div class="section">
       <div class="container">
+        <!-- Make a v-if to check if users.loading is equal to error and show an error message -->
+        <div class="alert" v-if="users.loading === 'error'">Error creating user</div>
+
         <div class="card">
           <div class="card__header">
             <h1>Create an Account</h1>
@@ -25,14 +28,34 @@
 </template>
 
 <script>
+import store from '../store';
+import userResource from '../resources/user';
+const create = userResource.actionCreators.create;
+
 export default {
   data() {
     return {
+      // Setup formvalues and v-model for various user inputs
+      formValues: {
+        username: '',
+        email: '',
+        password: '',
+      },
+      // Using $select add users to the data for the register
+      // The users resource will store the error from the server in users.error
+      users: this.$select('users'),
     };
   },
-
+// When the form submits
   methods: {
-
+//  Dispatch create from the user resource actionCreators passing in data from the form
+    send() {
+      store.dispatch(create(this.formValues))
+      .then(() => {
+// Wait for the dispatch to finish (using Promise.prototype.then) and redirect to the /users page
+        this.$router.push({ name: 'users' });
+      }).catch(() => {});
+    },
   },
 };
 </script>

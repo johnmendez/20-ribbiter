@@ -6,6 +6,8 @@ import VueRouter from 'vue-router';
 import App from './routes/application.vue';
 import Index from './routes/index.vue';
 import Register from './routes/register.vue';
+import Login from './routes/login.vue';
+import User from './routes/user-index.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +23,18 @@ const routes = [
     name: 'register',
     component: Register,
   },
+  // Setup router to respond to /login
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+  },
+  // Setup router to respond to /users
+  {
+    path: '/users',
+    name: 'User',
+    component: User,
+  }
 ];
 
 const router = new VueRouter({
