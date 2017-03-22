@@ -1,9 +1,6 @@
 .container {
-  min-width: 30rem;
-  position: absolute;
-  left: 50%;
-  margin-top: 5rem;
-  transform: translateX(-50%);
+  max-width: 60rem;
+  margin: auto;
 }
 
 .card {

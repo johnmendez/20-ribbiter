@@ -8,6 +8,7 @@ import Index from './routes/index.vue';
 import Register from './routes/register.vue';
 import Login from './routes/login.vue';
 import User from './routes/user-index.vue';
+import Ribbits from './routes/ribbits-index.vue';
 
 Vue.use(VueRouter);
 
@@ -34,7 +35,13 @@ const routes = [
     path: '/users',
     name: 'User',
     component: User,
-  }
+  },
+  // Setup router to respond to /ribbits
+  {
+    path: '/ribbits',
+    name: 'Ribbits',
+    component: Ribbits,
+  },
 ];
 
 const router = new VueRouter({
